@@ -49,3 +49,35 @@ def longest_word(sentence):
 
 text = "kiwi","apple","banana","watermelon","tofu","beef","salmon"
 print("Longest word:", longest_word(text))
+
+# 문제 4번
+positive_words = ["좋아","행복","멋져","최고","사랑해"]
+negative_words = ["싫어","화나","짜증","별로","나빠"]
+
+say = input("하고싶은 말을 적으세요.")
+
+main_string = "기분이 좋아"
+positive_words_string1 = "좋아","행복","멋져","최고","사랑해"
+negative_words_string2 = "싫어","화나","짜증","별로","나빠"
+
+if "positive_words__string1" in main_string:
+    print("기분이 좋아보이네요.")
+if "negative_words_string2" in main_string:
+    print("기분이 나빠보이네요.")  
+else:
+    print("평범한 하루네요.")
+
+
+# 문제 5번
+# ex 1
+str ='apples are delicious'
+str = str.title()+('.')
+print(str)
+
+# ex 2
+if __name__ == '__main__':
+ 
+    s = 'apples are delicious'
+ 
+    s = s.title()+('.')
+    print(s)
