@@ -45,3 +45,14 @@ for i in range(len(positive_words)):
         print("기분이 좋아보이네요.")
     elif negative_words[i] in feeling:
         print("기분이 나빠보이네요.")
+
+# 문제 5
+sentence = input("영어 문장을 올바르게 적어주세요.")
+word = sentence.split()
+upper_case = word
+for i in range(len(word)):
+    upper_case[i] = word[i][0].upper() + word[i][1:].lower()
+upper_case = " ".join(upper_case)
+print(upper_case)
+# apples are delicious
+# today is a really happy day
