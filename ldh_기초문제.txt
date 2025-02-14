@@ -11,8 +11,6 @@ else:
 odd = [0]
 even = [0]
 num = input("긴 숫자를 적어주세요.")
-print(len(num))
-print(type(num[0]))
 for i in range(len(num)):
     if (int(num[i]) % 2) == 1:
         odd[0] += int(num[i])
