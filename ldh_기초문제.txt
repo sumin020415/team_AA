@@ -33,5 +33,5 @@ for i in range(len(word) - 1):
     else:
         long.append(word[i])
         long.append(word[i + 1])
-result = list(set(long))
+result = sorted(list(set(long)))
 print(result)
