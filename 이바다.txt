@@ -1,0 +1,51 @@
+# 문제 1번
+name = "우영우"
+reverse_name = ''
+
+for c in name:
+    reverse_name = c + reverse_name
+
+print(f'name    : {name}')
+print(f'reverse : {reverse_name}')
+name = "인도인"
+reverse_name = ''
+
+for c in name:
+    reverse_name = c + reverse_name
+
+print(f'name    : {name}')
+print(f'reverse : {reverse_name}')
+name = "파이썬"
+reverse_name = ''
+
+for c in name:
+    reverse_name = c + reverse_name
+
+print(f'name    : {name}')
+print(f'reverse : {reverse_name}')
+
+
+# 문제 2번
+lst = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+even = []
+odd = []
+
+i = 0
+while i < len(lst):
+  if lst[i] % 2 == 0:
+    even.append(lst[i])
+  else:
+    odd.append(lst[i])        
+  i += 1  
+print(even)
+print(odd)
+
+
+# 문제 3번
+def longest_word(sentence):
+    words = sentence
+    return max(words, key=len)
+
+text = "kiwi","apple","banana","watermelon","tofu","beef","salmon"
+print("Longest word:", longest_word(text))
