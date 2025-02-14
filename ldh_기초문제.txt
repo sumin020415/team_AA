@@ -33,3 +33,15 @@ for i in range(len(word) - 1):
         long.append(word[i + 1])
 result = sorted(list(set(long)))
 print(result)
+
+# 문제 4
+positive_words = ["좋아", "행복", "멋져", "최고", "사랑해"]
+negative_words = ["싫어", "화나", "짜증", "별로", "나빠"]
+
+feeling = input("당신의 기분을 한 문장으로 표현해주세요.")
+
+for i in range(len(positive_words)):
+    if positive_words[i] in feeling:
+        print("기분이 좋아보이네요.")
+    elif negative_words[i] in feeling:
+        print("기분이 나빠보이네요.")
