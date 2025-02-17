@@ -1,0 +1,64 @@
+import requests as req
+import sys
+
+# 인자 받기
+args = sys.argv  
+
+def reverse(s):
+    word = ""
+    for i in s:
+        word = i + word
+    if word == s :
+        return True
+    else:
+        return False
+
+s = input("단어를 입력하세요: ")
+s = s.upper()
+new = ""        
+i = 0
+for i in range(len(s)):
+    if s[i] != " " and s[i] != "," and s[i] != "?":
+        new = new + s[i]
+result = reverse(new)
+print(result)
+
+
+import requests as req
+import sys
+
+# 인자 받기
+args = sys.argv[1:]
+
+def distinction(*args):
+    even = []
+    odd = []
+    for l in args:
+        num = int(l)  # 문자열을 정수로 변환
+        if num % 2 == 0:
+            even.append(num)
+        else: 
+            odd.append(num)
+    result = even, odd # *들여쓰기 주의*
+    return result
+
+print(distinction(*args))
+
+
+import sys
+
+def find_words(sentence):
+    if not sentence.strip():
+        return []  
+    words = sentence.split()
+    max_len = max(len(word) for word in words)
+    long = [word for word in words if len(word) == max_len]
+    return long
+
+sentence = input("문장을 입력하세요: ")
+longest_words = find_words(sentence)
+
+if longest_words:
+    print("문장 중 가장 긴 단어는:", ", ".join(longest_words))
+else:
+    print("입력된 문장이 없습니다.")
