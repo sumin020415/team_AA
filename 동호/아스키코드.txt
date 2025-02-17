@@ -1,0 +1,18 @@
+# 문제 1
+for i in range(65, 91):
+    print(chr(i))
+
+# 문제 2
+low_case = list(range(26))
+for i in range(97, 123):
+    low_case[i - 97 ] = chr(i)
+low_case.reverse()
+print(low_case)
+
+# 문제 3
+for i in range(65, 68):
+    for j in range(49, 59):
+        if j < 58:
+            print(chr(i) + chr(j))
+        else:
+            print(chr(i) + chr(49) + chr(48))
