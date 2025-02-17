@@ -81,3 +81,24 @@ if __name__ == '__main__':
  
     s = s.title()+('.')
     print(s)
+
+
+20250217
+# 문제 1
+for x in range(65,91):
+    print(chr(x),end="")
+
+# 문제 2
+str1 = 'abcdefghijklmnopqrstuvwxyz'
+str1_list = list(str1)		
+
+str1_list.reverse()			
+
+print(''.join(str1_list))
+
+# 문제 3
+
+for x in range(65,91):
+    for j in range(1,11):
+        print(f"{chr(x)}{j}", end=' ')
+    print(' ')
