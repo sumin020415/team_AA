@@ -1,0 +1,9 @@
+import requests
+import json
+url = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=e7b48729e8ea9ceebb4674db239e055c&targetDt=20250218&itemPerPage&multiMovieYn'
+res = requests.get(url).text
+data = json.loads(res)
+print(data['boxOfficeResult']['boxofficeType'])
+for i in range (10):
+    print(f'{i + 1} : ' + data['boxOfficeResult']['dailyBoxOfficeList'][i]['movieNm'])
+# 원하는 날짜의 영화 순위를 보고 싶으면 3번줄의 targetDT=의 값을 년/월/일 순으로 변경
