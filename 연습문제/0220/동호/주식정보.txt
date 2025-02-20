@@ -1,0 +1,11 @@
+import requests as req
+from bs4 import BeautifulSoup as bs
+url = "https://finance.naver.com/sise/sise_market_sum.naver"
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36'}
+web = req.get(url, headers = headers)
+soup = bs(web.content, 'html.parser')
+
+comp = soup.select('.tltle')
+won = soup.select('.number:nth-child(3)')
+for i, (c, w) in enumerate(zip(comp, won), 1):
+    print(f'{i} : {c.text} : {w.text}원')
