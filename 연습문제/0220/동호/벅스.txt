@@ -1,0 +1,11 @@
+import requests as req
+from bs4 import BeautifulSoup as bs
+url = "https://music.bugs.co.kr/chart"
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36'}
+web = req.get(url, headers = headers)
+soup = bs(web.content, 'html.parser')
+
+title = soup.select('#CHARTrealtime .title a')
+artist = soup.select('#CHARTrealtime .artist a')
+for i, (t, a) in enumerate(zip(title, artist), 1):
+    print(f'{i}위 : {t.text.strip()} / {a.text.strip()}')
