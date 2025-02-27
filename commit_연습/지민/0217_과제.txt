@@ -1,0 +1,23 @@
+def alphabet():
+    for i in range(97,123):
+        print(chr(i), end ="\n")
+       
+def reverse_alphabet():
+    for i in range(122,96,-1):
+        print(chr(i), end ="\n")
+
+
+def print_alphabet():
+    
+    for i in range(1,11):
+        print(chr(65)+str(i))
+    
+    for j in range(1,11):
+        print(chr(66)+str(j))
+        
+    for x in range(1,11):
+        print(chr(67)+str(x))
+
+alphabet()
+reverse_alphabet()
+print_alphabet()
